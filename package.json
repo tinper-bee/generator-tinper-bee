@@ -1,0 +1,30 @@
+{
+  "name": "generator-tinper-bee",
+  "version": "0.0.4",
+  "author": "Yonyou FED",
+  "description": "yeoman generator for tinper react component",
+  "keywords": [
+    "yeoman-generator",
+    "react-component",
+    "react",
+    "tinper",
+    "bee"
+  ],
+  "dependencies": {
+    "block-stream": "0.0.9",
+    "yeoman-generator": "^0.17.3"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iuap-design/generator-tinper-bee.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iuap-design/generator-tinper-bee/issues"
+  },
+  "homepage": "https://github.com/iuap-design/generator-tinper-bee#readme",
+  "main": "index.js"
+}

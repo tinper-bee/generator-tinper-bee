@@ -1,0 +1,2 @@
+
+export <%= AppName%> from './<%= AppName%>';
