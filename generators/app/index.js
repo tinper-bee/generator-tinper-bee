@@ -62,7 +62,7 @@ module.exports = Base.extend({
     this.dest.write('src/' + AppName + '.scss', '@import "../node_modules/tinper-bee-core/scss/index.scss";');
     this.dest.write('demo/' + AppName + 'Demo.scss', '@import "../src/' + AppName + '.scss";');
     this.dest.write('demo/' + AppName + 'Demo.js', [
-      "import " + AppName + " from '../src';",
+      "import { " + AppName + " } from '../src';",
       "import React, { Component } from 'react'",
       "import ReactDOM from 'react-dom';",
       "class Demo extends Component {render(){return( <" + AppName + "/> )}}",
