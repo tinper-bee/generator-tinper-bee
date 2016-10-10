@@ -65,7 +65,7 @@ gulp.task('pack_build', function(cb) {
 gulp.task('sass_demo', function(cb) {
     gulp.src(['./demo/**/*.scss'])
         .pipe(sourcemaps.init())
-        .pipe(less())
+        .pipe(sass())
         .pipe(concat('demo.css'))
         .pipe(replace([{
             search: /\/\*#\ssourceMappingURL=([^\*\/]+)\.map\s\*\//g,
