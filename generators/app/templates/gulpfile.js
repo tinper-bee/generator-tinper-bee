@@ -62,6 +62,14 @@ gulp.task('pack_build', function(cb) {
         })
 });
 
+gulp.task('sass_component', function () {
+    gulp.src(['./src/**/*.scss'])
+        .pipe(sass())
+        .pipe(concat('bee-button.css'))
+        .pipe(gulp.dest('./build'));
+        console.log('###### sass_component done ######');
+});
+
 gulp.task('sass_demo', function(cb) {
     gulp.src(['./demo/**/*.scss'])
         .pipe(sourcemaps.init())
@@ -106,11 +114,11 @@ gulp.task('server', [
 
 });
 
-gulp.task('default', ['pack_build'], function() {
+gulp.task('default', ['pack_build', 'sass_component'], function() {
 
 });
 
-gulp.task('publish', ['pack_build'], function() {
+gulp.task('publish', ['pack_build', 'sass_component'], function() {
     setTimeout(function() {
         var questions = [
             {

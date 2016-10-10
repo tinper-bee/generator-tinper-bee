@@ -59,8 +59,14 @@ module.exports = Base.extend({
 
     "export default " + AppName + ";"
     ].join('\n'));
-    this.dest.write('src/' + AppName + '.scss', '@import "../node_modules/tinper-bee-core/scss/index.scss";');
-    this.dest.write('demo/' + AppName + 'Demo.scss', '@import "../src/' + AppName + '.scss";');
+    this.dest.write('src/' + AppName + '.scss', [
+      '@import "../node_modules/tinper-bee-core/scss/minxin-variables";',
+      '@import "../node_modules/tinper-bee-core/scss/minxin-mixins";'
+    ].join('\n'));
+    this.dest.write('demo/' + AppName + 'Demo.scss', [
+      '@import "../node_modules/tinper-bee-core/scss/index.scss";',
+      '@import "../src/' + AppName + '.scss";'
+    ].join('\n'));
     this.dest.write('demo/' + AppName + 'Demo.js', [
       "import { " + AppName + " } from '../src';",
       "import React, { Component } from 'react'",
@@ -70,6 +76,7 @@ module.exports = Base.extend({
     ].join('\n'));
     this.dest.write('demo/index.js', [
     "import Demo from './" + AppName + "Demo';",
+    "import ReactDOM from 'react-dom';",
     "ReactDOM.render(<Demo/>, document.getElementById('tinperBeeDemo'));"
     ].join('\n'));
   },
