@@ -36,7 +36,8 @@
 "test": "./node_modules/.bin/mocha --compilers js:babel-core/register --require ./test/setup.js"
 },
 "dependencies": {
-  "classnames": "^2.2.5"
+  "classnames": "^2.2.5",
+  "bee-core": "^0.0.1"
 },
 "devDependencies": {
 "babel": "~6.3.26",

@@ -59,7 +59,7 @@ module.exports = Base.extend({
 
     "export default " + AppName + ";"
     ].join('\n'));
-    this.dest.write('src/' + AppName + '.scss', '@zero: 0;');
+    this.dest.write('src/' + AppName + '.scss', '@import "../node_modules/bee-core/scss/index.scss";');
     this.dest.write('demo/' + AppName + 'Demo.scss', '@import "../src/' + AppName + '.scss";');
     this.dest.write('demo/' + AppName + 'Demo.js', [
       "import " + AppName + "from '../src';",
@@ -69,7 +69,7 @@ module.exports = Base.extend({
       "export default Demo;"
     ].join('\n'));
     this.dest.write('demo/index.js', [
-    "var Demo = require('./" + AppName + "Demo');",
+    "import Demo from './" + AppName + "Demo';",
     "ReactDOM.render(<Demo/>, document.getElementById('tinperBeeDemo'));"
     ].join('\n'));
   },
