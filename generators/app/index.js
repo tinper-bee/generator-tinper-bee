@@ -59,7 +59,7 @@ module.exports = Base.extend({
 
     "export default " + AppName + ";"
     ].join('\n'));
-    this.dest.write('src/' + AppName + '.scss', '@import "../node_modules/bee-core/scss/index.scss";');
+    this.dest.write('src/' + AppName + '.scss', '@import "../node_modules/tinper-bee-core/scss/index.scss";');
     this.dest.write('demo/' + AppName + 'Demo.scss', '@import "../src/' + AppName + '.scss";');
     this.dest.write('demo/' + AppName + 'Demo.js', [
       "import " + AppName + "from '../src';",
