@@ -79,6 +79,11 @@ module.exports = Base.extend({
     "import ReactDOM from 'react-dom';",
     "ReactDOM.render(<Demo/>, document.getElementById('tinperBeeDemo'));"
     ].join('\n'));
+    this.dest.write('test/' + AppName + '.test.js', [
+      "import React from 'react';",
+      "import {shallow, mount, render} from 'enzyme';",
+      "import {expect} from 'chai';"
+    ].join('\n'));
   },
 
   done: function () {
