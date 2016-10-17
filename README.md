@@ -47,17 +47,13 @@ API介绍
  -Test.scss
  -index.js
 -test
- -setup.js
- -index.test.js
+ -Test.test.js
 -.eslintignore
--.eslintrc
 -.npmignore
--gulpfile.js
 -HISTORY.md
 -index.html
 -package.json
 -README.md
--webpack.dev.js
 ```
 
 ## 源码目录说明
@@ -68,11 +64,18 @@ API介绍
 
 
 ## 开发调试
-
 - 在项目根目录执行 `npm install` 安装必要模块
-- 在项目根目录执行 `npm run dev` 查看demo用例
-- 在项目根目录执行 `gulp` 产出build目录代码
-- 在项目根目录执行 `npm test` 执行测试
+- 全局安装bee-tools
+```
+npm install -g bee-tools
+```
+- 在项目根目录执行 `npm run dev` 查看demo，进行调试
+- 在项目根目录执行 `npm run build` 产出build目录代码
+- 在项目根目录执行 `npm run lint` 执行lint检查
+- 在项目根目录执行 `npm run test` 执行测试用例
+- 在项目根目录执行 `npm run chrome` 在chrome执行测试用例
+- 在项目根目录执行 `npm run browsers` 在本机多浏览器执行测试用例
+- 在项目根目录执行 `npm run pub` 进行组件发布,master分支为正式发布版，release分支为开发分支
 
 
 ## 浏览器支持版本
@@ -84,7 +87,7 @@ API介绍
 ## 支持 HISTORY.md
 
 - 通过在根目录运行 `npm run history` 生成 HISTORY.md
-- 需要建立必要的 milestone，issue，label，参见： https://github.com/iuap-design/generator-neoui-react
+- 需要建立必要的 milestone，issue，label，参见： https://github.com/tinper-bee/generator-tinper-bee
 - milestone 标题为语义化版本号，issue 属于某个 milestone，并且具备 label
 - label 为枚举，包括
  - `new` 新增的属性、功能、方法、特性等等
@@ -93,5 +96,6 @@ API介绍
  - `changed` 涉及到兼容性变化的改动。
 
 ## 发布
-
-- 在根目录运行 npm publish
+- 在git上对原版本打tag
+- 将修改的代码进行提交github
+- 在根目录运行 npm run pub
