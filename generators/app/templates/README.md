@@ -6,16 +6,9 @@
 
 react <%= packageName%> component for tinper-bee
 
-#### setup develop environment
+some description...
 
-```sh
-$ git clone https://github.com/tinper-bee/<%= packageName%>
-$ cd <%= packageName%>
-$ npm install
-$ npm run dev
-```
-
-## Usage
+## 使用方法
 
 ```js
 
@@ -24,5 +17,15 @@ $ npm run dev
 
 
 ## API
+
 |参数|说明|类型|默认值|
-|---|----|---|------|
+|:--|:---:|:--:|---:|
+
+#### 开发调试
+
+```sh
+$ git clone https://github.com/tinper-bee/<%= packageName%>
+$ cd <%= packageName%>
+$ npm install
+$ npm run dev
+```

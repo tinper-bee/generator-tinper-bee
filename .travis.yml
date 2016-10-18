@@ -14,4 +14,4 @@ env:
 before_install:
   - npm install
 
-script: npm lint && npm test
+script: npm run browsers && npm test
