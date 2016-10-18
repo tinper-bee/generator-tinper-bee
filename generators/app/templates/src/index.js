@@ -1,2 +1,2 @@
-
-export <%= AppName%> from './<%= AppName%>';
+import <%= AppName%> from './<%= AppName%>';
+export default <%= AppName%> ;
