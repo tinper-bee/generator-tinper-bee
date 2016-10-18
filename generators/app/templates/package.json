@@ -31,7 +31,7 @@
 "port": <%= port%>
 },
 "scripts": {
-"dev": "bee-tools run dev",
+"dev": "bee-tools run start",
 "build": "bee-tools run build",
 "lint": "bee-tools run lint",
 "test": "bee-tools run test",
