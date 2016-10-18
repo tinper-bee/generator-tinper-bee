@@ -20,8 +20,10 @@ module.exports = Base.extend({
   },
 
   welcome: function () {
-    this.appname = this.appname.replace(/\s/g, '-');
+    this.appname = this.appname.replace(/\s/g, '-').split("-").splice(1).join('-');
+    console.log(this.appname);
     this.AppName = this.appname.charAt(0).toUpperCase() + camelCase(this.appname.slice(1));
+    console.log(this.AppName);
     this.log('welcome to generator-tinper-bee: ' + this.appname);
     this.port = this.options.port;
     this.original_repo_url = this.options.repoUrl;
@@ -52,9 +54,7 @@ module.exports = Base.extend({
     });
     var AppName = this.AppName;
     this.dest.write('src/' + AppName + '.js', [
-    "import React, { Component } from 'react'",
-    "import ReactDOM from 'react-dom'",
-
+    "import React, { Component, PropTypes } from 'react'",
     "class " + AppName + " extends Component {render(){return(<h2>Welcome use tinper-bee</h2> )}}",
 
     "export default " + AppName + ";"
