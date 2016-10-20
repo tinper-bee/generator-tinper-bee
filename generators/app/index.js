@@ -54,7 +54,7 @@ module.exports = Base.extend({
     });
     var AppName = this.AppName;
     this.dest.write('src/' + AppName + '.js', [
-    "import React, { Component, PropTypes } from 'react'",
+    "import React, { Component, PropTypes } from 'react';",
     "class " + AppName + " extends Component {render(){return(<h2>Welcome use tinper-bee</h2> )}}",
 
     "export default " + AppName + ";"
@@ -68,8 +68,8 @@ module.exports = Base.extend({
       '@import "../src/' + AppName + '.scss";'
     ].join('\n'));
     this.dest.write('demo/' + AppName + 'Demo.js', [
-      "import { " + AppName + " } from '../src';",
-      "import React, { Component } from 'react'",
+      "import " + AppName + " from '../src/index';",
+      "import React, { Component } from 'react';",
       "import ReactDOM from 'react-dom';",
       "class Demo extends Component {render(){return( <" + AppName + "/> )}}",
       "export default Demo;"
@@ -82,7 +82,8 @@ module.exports = Base.extend({
     this.dest.write('test/' + AppName + '.test.js', [
       "import React from 'react';",
       "import {shallow, mount, render} from 'enzyme';",
-      "import {expect} from 'chai';"
+      "import {expect} from 'chai';",
+      "import " + AppName + " from '../src/index';"
     ].join('\n'));
   },
 
