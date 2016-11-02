@@ -5,7 +5,7 @@
   "keywords": [
     "react",
     "react-component",
-    "react-<%= appname%>",
+    "<%= packageName%>",
     "iuap-design",
     "neoui-react",
     "<%= appname%>"
@@ -21,12 +21,12 @@
 "url": "<%= repo_url%>.git"
 },
 <%} else {%>
-"repository": "http://github.com/tinper-bee/<%= appname%>",
+"repository": "http://github.com/tinper-bee/<%= packageName%>",
 <%}%>
 "bugs": "<%= repo_url%>/issues",
 "license": "MIT",
 
-"main":"./build/index",
+"main":"./build/<%= packageName%>",
 "config":{
 "port": <%= port%>
 },

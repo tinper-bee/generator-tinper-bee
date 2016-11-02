@@ -21,9 +21,7 @@ module.exports = Base.extend({
 
   welcome: function () {
     this.appname = this.appname.replace(/\s/g, '-').split("-").splice(1).join('-');
-    console.log(this.appname);
     this.AppName = this.appname.charAt(0).toUpperCase() + camelCase(this.appname.slice(1));
-    console.log(this.AppName);
     this.log('welcome to generator-tinper-bee: ' + this.appname);
     this.port = this.options.port;
     this.original_repo_url = this.options.repoUrl;
